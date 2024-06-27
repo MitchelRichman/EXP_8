@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://pf2x0yiaakvk"]
+
+[ext_resource type="Texture2D" uid="uid://7vh3xwkdtgvn" path="res://scenes/1614641017_27-p-fon-dlya-fotoshopa-igri-32 (1).jpg" id="1_2mvt1"]
+[ext_resource type="Script" path="res://menu.gd" id="1_fd35o"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_fd35o")
+
+[node name="161464101727-p-fon-dlya-fotoshopa-igri-32(1)" type="Sprite2D" parent="."]
+position = Vector2(576, 322)
+scale = Vector2(0.598958, 0.590741)
+texture = ExtResource("1_2mvt1")
+
+[node name="PLAY" type="Button" parent="."]
+offset_left = 289.0
+offset_top = 365.0
+offset_right = 863.0
+offset_bottom = 533.0
+theme_override_colors/font_color = Color(0.843137, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "QUIT"
+
+[node name="QUIT" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 126.0
+offset_right = 870.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0.843137, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "PLAY"
+
+[connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="QUIT" to="." method="_on_quit_pressed"]
